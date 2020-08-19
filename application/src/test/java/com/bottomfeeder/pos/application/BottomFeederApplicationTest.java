@@ -1,16 +1,16 @@
-package com.bottomfeeder.multimodule.application;
+package com.bottomfeeder.pos.application;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
+import com.bottomfeeder.pos.service.MyService;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.bottomfeeder.multimodule.service.MyService;
-
 @SpringBootTest
-public class DemoApplicationTest {
+public class BottomFeederApplicationTest {
 
 	@Autowired
 	private MyService myService;

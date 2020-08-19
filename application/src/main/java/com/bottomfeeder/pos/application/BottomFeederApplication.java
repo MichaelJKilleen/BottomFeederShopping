@@ -1,12 +1,13 @@
-package com.bottomfeeder.multimodule.application;
+package com.bottomfeeder.pos.application;
 
-import com.bottomfeeder.multimodule.service.MyService;
+import com.bottomfeeder.pos.service.MyService;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication(scanBasePackages = "com.bottomfeeder.multimodule")
+@SpringBootApplication(scanBasePackages = "com.bottomfeeder.pos")
 @RestController
 public class BottomFeederApplication {
 

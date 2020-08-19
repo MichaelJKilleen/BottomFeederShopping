@@ -1,11 +1,8 @@
-package com.bottomfeeder.multimodule.service;
+package com.bottomfeeder.pos.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.bottomfeeder.multimodule.service.MyService;
-
 import org.junit.jupiter.api.Test;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
