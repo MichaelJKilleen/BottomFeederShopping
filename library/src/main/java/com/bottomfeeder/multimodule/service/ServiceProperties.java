@@ -1,4 +1,4 @@
-package com.example.multimodule.service;
+package com.bottomfeeder.multimodule.service;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

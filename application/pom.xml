@@ -8,7 +8,7 @@
 		<version>2.3.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>com.bottomfeeder</groupId>
 	<artifactId>application</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>multi-module-application</name>
@@ -28,7 +28,7 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.example</groupId>
+			<groupId>com.bottomfeeder</groupId>
 			<artifactId>library</artifactId>
 			<version>${project.version}</version>
 		</dependency>

@@ -1,15 +1,16 @@
-package com.example.multimodule.service;
+package com.bottomfeeder.multimodule.application;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest("service.message=Hello")
-public class MyServiceTest {
+import com.bottomfeeder.multimodule.service.MyService;
+
+@SpringBootTest
+public class DemoApplicationTest {
 
 	@Autowired
 	private MyService myService;
@@ -17,10 +18,6 @@ public class MyServiceTest {
 	@Test
 	public void contextLoads() {
 		assertThat(myService.message()).isNotNull();
-	}
-
-	@SpringBootApplication
-	static class TestConfiguration {
 	}
 
 }
