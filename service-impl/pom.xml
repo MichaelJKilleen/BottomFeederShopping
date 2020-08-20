@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bottomfeeder</groupId>
-	<artifactId>library</artifactId>
+	<artifactId>service-impl</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pos-module-library</name>
+	<name>pos-module-service-impl</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -23,6 +23,26 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.bottomfeeder</groupId>
+			<artifactId>model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.bottomfeeder</groupId>
+			<artifactId>repository</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.bottomfeeder</groupId>
+			<artifactId>service-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
