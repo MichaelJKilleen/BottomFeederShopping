@@ -19,49 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class ClassicModelsController {
 
     private final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(getClass());
-    private final ProductRepository productRepository;
-    private final IClassicModelsSerivce classicModelsSerivce;
 
-    public ClassicModelsController(final ProductRepository productRepository,
-            final IClassicModelsSerivce classicModelsSerivce) {
-        this.productRepository = productRepository;
-        this.classicModelsSerivce = classicModelsSerivce;
-    }
+    public ClassicModelsController() {
+        LOGGER.debug("Boom!!!");
 
-    @GetMapping("/products")
-    // @Secured("ROLE_USER")
-    public List<Product> get(@RequestParam(value = "productLine", defaultValue = "") final String productLine) {
-        List<Product> products = (List<Product>) productRepository.findAll();
-        if (!productLine.equals("")) {
-            products = products.stream().filter(product -> product.getProductLine().equals(productLine))
-                    .collect(Collectors.toList());
-        }
-        products.forEach(product -> System.out.println(product.getProductCode()));
-
-        return products;
-    }
-
-    // @GetMapping("/productlines/productLine")
-    // public List<ProductLine> getProductLine(@PathVariable("productLine") String
-    // productLine) {
-    @GetMapping("/productlines")
-    // @Secured("ROLE_USER")
-    public List<ProductLine> getProductLine(
-            @RequestParam(value = "productLine", defaultValue = "") final String productLine) {
-        List<ProductLine> productLines = classicModelsSerivce.FindAllProductLines();
-        if (!productLine.equals("")) {
-            productLines = productLines.stream()
-                    .filter(productLine1 -> productLine1.getProductLine().equals(productLine))
-                    .collect(Collectors.toList());
-        }
-        return productLines;
-    }
-
-    @PatchMapping(path = "/{id}", consumes = "application/json", produces = "application/json")
-    // @Secured("ROLE_ADMIN")
-    public String patch(@PathVariable("id") final int id, @RequestBody final String employee) {
-        LOGGER.debug("id: " + id + ", employee: " + employee);
-        return "Done";
     }
 
 }

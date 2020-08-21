@@ -15,6 +15,10 @@ public class ProductLine {
 
     private List<Product> productList;
 
+    public ProductLine() {
+
+    }
+
     public ProductLine(String productLine, String textDescription, String htmlDescription) {
         this.productLine = productLine;
         this.textDescription = textDescription;
